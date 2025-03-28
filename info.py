@@ -19,27 +19,27 @@ def is_valid_ip(ip):
     return re.match(ip_pattern, ip) is not None
 
 # Bot information
-API_ID = environ.get('API_ID', '')
+API_ID = environ.get('API_ID', '16708960')
 if len(API_ID) == 0:
     print('Error - API_ID is missing, exiting now')
     exit()
 else:
     API_ID = int(API_ID)
-API_HASH = environ.get('API_HASH', '')
+API_HASH = environ.get('API_HASH', 'dda7630be99593256cb7c520eae0ce6d')
 if len(API_HASH) == 0:
     print('Error - API_HASH is missing, exiting now')
     exit()
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7933550773:AAHaRSIpeoQSCw4XVh1AxiiZ1kSmbo54tso')
 if len(BOT_TOKEN) == 0:
     print('Error - BOT_TOKEN is missing, exiting now')
     exit()
-PORT = int(environ.get('PORT', '80'))
+PORT = int(environ.get('PORT', '8080'))
 
 # Add your images to "imgs" folder in this repo (https://github.com/HA-Bots/Auto-Filter-Bot/tree/main/imgs)
 PICS = [os.path.join('imgs', file) for file in os.listdir('imgs')]
 
 # Bot Admins
-ADMINS = environ.get('ADMINS', '')
+ADMINS = environ.get('ADMINS', '5482962500')
 if len(ADMINS) == 0:
     print('Error - ADMINS is missing, exiting now')
     exit()
@@ -50,7 +50,7 @@ else:
 INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '').split()]
 if len(INDEX_CHANNELS) == 0:
     print('Info - INDEX_CHANNELS is empty')
-LOG_CHANNEL = environ.get('LOG_CHANNEL', '')
+LOG_CHANNEL = environ.get('LOG_CHANNEL', '-1002374553598')
 if len(LOG_CHANNEL) == 0:
     print('Error - LOG_CHANNEL is missing, exiting now')
     exit()
@@ -61,7 +61,7 @@ if len(FORCE_SUB_CHANNELS) == 0:
     print('Info - FORCE_SUB_CHANNELS is empty')
     
 # support group
-SUPPORT_GROUP = environ.get('SUPPORT_GROUP', '')
+SUPPORT_GROUP = environ.get('SUPPORT_GROUP', '-1002572131699')
 if len(SUPPORT_GROUP) == 0:
     print('Error - SUPPORT_GROUP is missing, exiting now')
     exit()
@@ -69,7 +69,7 @@ else:
     SUPPORT_GROUP = int(SUPPORT_GROUP)
 
 # MongoDB information
-DATABASE_URL = environ.get('DATABASE_URL', "")
+DATABASE_URL = environ.get('DATABASE_URL', "mongodb+srv://heisenberg:walder1234@cluster0.wkum1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 if len(DATABASE_URL) == 0:
     print('Error - DATABASE_URL is missing, exiting now')
     exit()
@@ -77,7 +77,7 @@ SECOND_DATABASE_URL = environ.get('SECOND_DATABASE_URL', "")
 if len(SECOND_DATABASE_URL) == 0:
     print('Info - SECOND_DATABASE_URL is empty')
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Files')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'My_Tg_files')
 
 # Links
 SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/HA_Bots_Support')
@@ -95,8 +95,8 @@ LANGUAGES = [language.lower() for language in environ.get('LANGUAGES', 'hindi en
 QUALITY = [quality.lower() for quality in environ.get('QUALITY', '360p 480p 720p 1080p 2160p').split()]
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", script.IMDB_TEMPLATE)
 FILE_CAPTION = environ.get("FILE_CAPTION", script.FILE_CAPTION)
-SHORTLINK_URL = environ.get("SHORTLINK_URL", "mdiskshortner.link")
-SHORTLINK_API = environ.get("SHORTLINK_API", "36f1ae74ba1aa01e5bd73bdd0bc22aa915443501")
+SHORTLINK_URL = environ.get("SHORTLINK_URL", "vipurl.in")
+SHORTLINK_API = environ.get("SHORTLINK_API", "350e1c2b56b3162b0259542340b957f200deebe3")
 VERIFY_EXPIRE = int(environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
 WELCOME_TEXT = environ.get("WELCOME_TEXT", script.WELCOME_TEXT)
 INDEX_EXTENSIONS = [extensions.lower() for extensions in environ.get('INDEX_EXTENSIONS', 'mp4 mkv').split()]
@@ -104,7 +104,7 @@ PM_FILE_DELETE_TIME = int(environ.get('PM_FILE_DELETE_TIME', '3600'))
 
 # boolean settings
 USE_CAPTION_FILTER = is_enabled('USE_CAPTION_FILTER', False)
-IS_VERIFY = is_enabled('IS_VERIFY', False)
+IS_VERIFY = is_enabled('IS_VERIFY', True)
 AUTO_DELETE = is_enabled('AUTO_DELETE', False)
 WELCOME = is_enabled('WELCOME', False)
 PROTECT_CONTENT = is_enabled('PROTECT_CONTENT', False)
